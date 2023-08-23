@@ -1,0 +1,21 @@
+.header_area {
+  position: absolute;
+  width: 100%;
+  background: #ffffff;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.main_menu {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.custom-brand {
+  display: flex;
+  flex-wrap: wrap;
+}
