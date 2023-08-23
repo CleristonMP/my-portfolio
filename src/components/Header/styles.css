@@ -1,21 +1,28 @@
 .header_area {
   position: absolute;
   width: 100%;
-  background: #ffffff;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: center;
+  background: var(--bg-white);
+  min-height: 70px;
 }
 
 .main_menu {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  margin-top: 7px;
 }
 
 .custom-brand {
   display: flex;
   flex-wrap: wrap;
+}
+
+ul > .nav-item {
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  .main_menu {
+    max-width: 1100px;
+  }
 }
