@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="header_area" id="header">
       <div className="main_menu">
-        <nav className={windowWidth > 768 ? "navbar navbar-expand-md" : "navbar navbar-expand-md navbar-dark bg-dark"}>
+        <nav className={windowWidth >= 768 ? "navbar navbar-expand-md nav-f1" : "navbar navbar-expand-md navbar-dark bg-dark"}>
           <div className="container-fluid my-1">
             <a className="navbar-brand custom-brand" href="#">
               <Image src={logo} alt="Cleriston" width={140} />
