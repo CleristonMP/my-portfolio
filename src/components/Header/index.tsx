@@ -1,20 +1,26 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import logo from '../../img/logo.png';
+import logo from '../../assets/imgs/logo.svg';
 
 import './styles.css';
 
 export default function Header() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth || 0);
+
+  window.addEventListener('resize', () => {
+    setWindowWidth(window.innerWidth);
+  })
+
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
   }, []);
 
   return (
-    <header className="header_area">
+    <header className="header_area" id="header">
       <div className="main_menu">
-        <nav className="navbar navbar-expand-md">
-          <div className="container-fluid">
+        <nav className={windowWidth > 768 ? "navbar navbar-expand-md" : "navbar navbar-expand-md navbar-dark bg-dark"}>
+          <div className="container-fluid my-1">
             <a className="navbar-brand custom-brand" href="#">
               <Image src={logo} alt="Cleriston" width={140} />
             </a>
@@ -29,7 +35,10 @@ export default function Header() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse justify-content-end" id="navbarToggler">
+            <div
+              className="collapse navbar-collapse justify-content-end"
+              id="navbarToggler"
+            >
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <a className="nav-link active" href="#">

@@ -1,4 +1,5 @@
 import Header from "@/components/Header"
+import Presentation from "@/components/Presentation"
 import 'bootstrap/dist/css/bootstrap.css'
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <div><h1>Cleriston Pereira</h1></div>
+        <Presentation />
       </main>
     </>
   )

@@ -1,15 +1,12 @@
 .header_area {
-  position: absolute;
   width: 100%;
   background: var(--bg-white);
-  min-height: 70px;
 }
 
 .main_menu {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  margin-top: 7px;
 }
 
 .custom-brand {

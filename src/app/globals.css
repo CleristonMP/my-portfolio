@@ -2,6 +2,14 @@
 
 :root {
   --bg-white: #ffffff;
+  --bg-dark: #000000;
+  --bg-purple: #854fee;
+  --bg-cyan: #4458dc;
+
+  --txt-white: #ffffff;
+  --txt-dark: #222222;
+
+  --shadow-blue: rgba(118, 85, 225, 0.3);
 }
 
 * {
