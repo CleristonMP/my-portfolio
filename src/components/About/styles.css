@@ -1,0 +1,38 @@
+.section_gap {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.about_area {
+  position: relative;
+}
+
+.about_area .about_img {
+  display: none;
+}
+
+.about_area .about_img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main_title h2 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: var(--bg-dark);
+}
+
+.about_area .main_title p {
+  margin-bottom: 20px;
+  color: var(--txt-gray);
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.about_area .primary_btn {
+  margin-top: 20px;
+}

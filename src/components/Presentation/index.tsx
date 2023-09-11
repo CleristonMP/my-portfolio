@@ -17,7 +17,7 @@ export default function Presentation() {
                 <h1 className="text-uppercase">I am Cleriston Pereira</h1>
                 <h5 className="text-uppercase">Full stack web developer</h5>
                 <div className="d-flex align-items-center">
-                  <a className="btn btn-primary" href="#">
+                  <a className="btn btn-primary my-btn custom-btn" href="#">
                     <span>Hire Me</span>
                   </a>
                   <a className="btn btn-primary tr-bg" href="#">
