@@ -1,19 +1,13 @@
-.section_gap {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
 .about_area {
   position: relative;
 }
 
-.about_area .about_img {
-  display: none;
+.section_gap {
+  padding: 70px 0;
 }
 
-.about_area .about_img img {
-  max-width: 100%;
-  height: auto;
+.about_area .about_img {
+  display: none;
 }
 
 .main_title h2 {
@@ -35,4 +29,58 @@
 
 .about_area .primary_btn {
   margin-top: 20px;
+}
+
+@media (min-width: 576px) {
+  .section_gap {
+    padding: 80px 0;
+  }
+
+  .main_title h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main_title h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 992px) {
+  .about_area .about_img {
+    display: unset;
+    position: relative;
+    right: 0;
+  }
+
+  .about_area .about_img img {
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+  }
+
+  .main_title h2 {
+    line-height: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section_gap {
+    padding: 200px 0;
+  }
+
+  .about_area .custom-btn {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about_area .about_img {
+    right: 150px;
+  }
+
+  .about_area .about_img img {
+    max-width: none;
+  }
 }

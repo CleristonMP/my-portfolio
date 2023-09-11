@@ -11,7 +11,7 @@ export default function About() {
         <div className="row justify-content-start align-items-center">
           <div className="col-lg-5">
             <div className="about_img">
-              <Image src={aboutImg} alt="Cleriston" width={140} />
+              <Image src={aboutImg} alt="About image" />
             </div>
           </div>
 

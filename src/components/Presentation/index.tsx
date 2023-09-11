@@ -28,7 +28,7 @@ export default function Presentation() {
             </div>
             <div className="col-lg-5">
               <div className="home_right_img">
-                <Image src={banner} alt="Cleriston avatar" width={140} />
+                <Image src={banner} alt="Cleriston avatar" />
               </div>
             </div>
           </div>
