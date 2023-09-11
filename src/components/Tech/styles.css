@@ -1,0 +1,72 @@
+.tech_area {
+  padding-bottom: 80px;
+}
+
+.single-brand-item {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  height: 100px;
+  width: 140px;
+  border: 1px solid var(--border-light-gray);
+}
+
+.single-brand-item .d-table-cell {
+  vertical-align: middle;
+}
+
+.client-info {
+  padding: 25px 30px;
+  padding-top: 50px;
+  background-color: var(--bg-light-purple);
+  text-align: center;
+  position: relative;
+}
+
+.client-info::before {
+  background: none;
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -50px;
+  height: 175px;
+  width: 175px;
+}
+
+.large {
+  color: var(--txt-purple);
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 85px;
+  position: relative;
+  z-index: 9;
+}
+
+.txt-small {
+  text-align: left;
+  color: var(--txt-black);
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.call-now {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.phone-icon {
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--txt-black);
+}
+
+.call-now p {
+  color: var(--txt-purple);
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.call-now h3 {
+  font-size: 17px;
+}

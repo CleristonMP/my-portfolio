@@ -5,10 +5,15 @@
   --bg-dark: #000000;
   --bg-purple: #854fee;
   --bg-cyan: #4458dc;
+  --bg-light-purple: #faf8ff;
 
   --txt-white: #ffffff;
+  --txt-black: #000000;
   --txt-dark: #222222;
   --txt-gray: #777777;
+  --txt-purple: #854fee;
+
+  --border-light-gray: #eeeeee;
 
   --shadow-blue: rgba(118, 85, 225, 0.3);
 }
@@ -25,6 +30,9 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  line-height: 26px;
+  font-size: 15px;
+  color: var(--txt-gray);
 }
 
 a {
@@ -34,6 +42,14 @@ a {
 
 .f1 {
   flex: 1 !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.ml-15 {
+  margin-left: 15px;
 }
 
 .custom-btn {
