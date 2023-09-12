@@ -16,7 +16,7 @@ export default function About() {
           </div>
 
           <div className="offset-lg-1 col-lg-5">
-            <div className="main_title text-left">
+            <div className="about_title text-left">
               <h2>let&apos;s introduce about myself</h2>
               <p>
                 Whose given. Were gathered. There first subdue greater. Bearing

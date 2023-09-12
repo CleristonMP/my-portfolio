@@ -60,7 +60,6 @@
 
 .txt-small {
   text-align: left;
-  color: var(--txt-black);
   font-size: 20px;
   margin-left: 20px;
 }
@@ -73,7 +72,6 @@
 .phone-icon {
   font-size: 50px;
   font-weight: 700;
-  color: var(--txt-black);
 }
 
 .call-now p {
@@ -86,7 +84,6 @@
 
 .call-now h3 {
   font-size: 17px;
-  color: var(--txt-black);
 }
 
 @media (min-width: 576px) {
