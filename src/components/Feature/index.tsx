@@ -20,7 +20,7 @@ export default function Feature() {
             </div>
           </div>
         </div>
-        <div className="row feature_inner">
+        <div className="row">
           <div className="col-lg-3 col-md-6">
             <div className="feature_item">
               <Image src={ftImgs.wpDev} alt="" />
