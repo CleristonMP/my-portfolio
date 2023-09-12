@@ -2,16 +2,33 @@
   padding-bottom: 80px;
 }
 
-.single-brand-item {
+.single-tech-item {
   margin: 0 auto;
   margin-bottom: 30px;
+  width: 50%;
+  max-width: 150px;
   height: 100px;
-  width: 140px;
   border: 1px solid var(--border-light-gray);
+  transition: all 0.4s ease 0s;
 }
 
-.single-brand-item .d-table-cell {
+.single-tech-item:hover {
+  border: 1px solid transparent;
+  box-shadow: 0px 8px 30px rgba(118, 85, 225, 0.15);
+}
+
+.single-tech-item .d-table-cell {
   vertical-align: middle;
+}
+
+.single-tech-item img {
+  max-width: 100px;
+  margin: 0 auto;
+  transition: all 0.4s ease 0s;
+}
+
+.single-tech-item:hover img {
+  filter: brightness(0%);
 }
 
 .client-info {
@@ -32,7 +49,7 @@
   width: 175px;
 }
 
-.large {
+.txt-large {
   color: var(--txt-purple);
   font-size: 100px;
   font-weight: 700;
@@ -69,4 +86,63 @@
 
 .call-now h3 {
   font-size: 17px;
+  color: var(--txt-black);
+}
+
+@media (min-width: 576px) {
+  .single-tech-item {
+    margin: unset;
+    margin-bottom: 30px;
+    width: 60%;
+  }
+
+  .client-info {
+    margin-top: 50px;
+    padding-top: 25px;
+  }
+
+  .client-info::before {
+    background: url('../../assets/imgs/client-info-bg.png') no-repeat;
+  }
+
+  .call-now {
+    padding-top: 50px;
+  }
+
+  .phone-icon {
+    font-size: 60px;
+  }
+
+  .call-now h3 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .single-tech-item {
+    width: 80%;
+    max-width: 170px;
+  }
+
+  .single-tech-item img {
+    max-width: 80px;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .single-tech-item {
+    width: 100%;
+  }
+
+  .client-info {
+    padding: 25px 30px;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tech_area {
+    padding-bottom: 170px;
+  }
 }

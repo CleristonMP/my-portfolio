@@ -33,7 +33,7 @@ export default function Tech() {
   }, []);
 
   return (
-    <section id="tech" className="tech_area section_gap_bottom">
+    <section id="tech" className="tech_area">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6">
@@ -44,9 +44,9 @@ export default function Tech() {
                     key={Math.random()}
                     className="col-lg-4 col-md-4 col-sm-6"
                   >
-                    <div className="single-brand-item d-table">
+                    <div className="single-tech-item d-table">
                       <div className="d-table-cell text-center">
-                        <Image src={img} alt="About image" />
+                        <Image src={img} alt="Tech image" />
                       </div>
                     </div>
                   </div>
@@ -56,7 +56,7 @@ export default function Tech() {
           <div className="offset-lg-2 col-lg-4 col-md-6">
             <div className="client-info">
               <div className="d-flex mb-50">
-                <span className="large">10</span>
+                <span className="txt-large">10</span>
                 <span className="txt-small">Years Experience Working</span>
               </div>
               <div className="call-now d-flex">
