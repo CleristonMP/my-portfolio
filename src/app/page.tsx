@@ -5,6 +5,7 @@ import About from '@/components/About';
 import Tech from '@/components/Tech';
 import Feature from '@/components/Feature';
 import Portfolio from '@/components/Portfolio';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Tech />
         <Feature />
         <Portfolio />
+        <Footer />
       </main>
     </>
   );

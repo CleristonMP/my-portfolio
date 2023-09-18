@@ -1,0 +1,46 @@
+.footer {
+  padding: 80px 0;
+}
+
+.footer_logo {
+  text-align: center;
+}
+
+.footer_logo h4 {
+  font-size: 20px;
+  margin-top: 35px;
+  text-transform: uppercase;
+}
+
+.footer_social {
+  text-align: center;
+  margin: 25px 0 30px;
+}
+
+.footer_social a {
+  padding: 0 20px;
+}
+
+.footer_social svg {
+  font-size: 25px;
+}
+
+.footer_social svg path {
+  fill: var(--txt-gray);
+  transition: all 0.4s ease 0s;
+}
+
+.footer_social svg:hover path {
+  fill: var(--txt-purple);
+}
+
+.footer_bottom {
+  text-align: center;
+}
+
+.footer_text {
+  margin: 0;
+  font-weight: 400;
+  color: var(--txt-gray);
+  line-height: 26px;
+}
