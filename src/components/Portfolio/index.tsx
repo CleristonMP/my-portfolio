@@ -15,11 +15,11 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="filters-content">
-          <div className="row portfolio-grid justify-content-center">
-            <div className="col-lg-4 col-md-6 all latest">
-              <div className="portfolio_box">
-                <div className="single_portfolio">
+        <div className="portfolio-content">
+          <div className="row justify-content-center">
+            <div className="col-lg-4 col-md-6">
+              <div className="project_box">
+                <div className="single_project">
                   <Image
                     src={portfImgs.p1}
                     alt=""
@@ -28,15 +28,14 @@ export default function Portfolio() {
                 </div>
                 <div className="short_info">
                   <h4>
-                    <a href="portfolio-details.html">minimal design</a>
+                    <a href="#">minimal design</a>
                   </h4>
-                  <p>Animated, portfolio</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 all popular">
-              <div className="portfolio_box">
-                <div className="single_portfolio">
+            <div className="col-lg-4 col-md-6">
+              <div className="project_box">
+                <div className="single_project">
                   <Image
                     src={portfImgs.p2}
                     alt=""
@@ -45,15 +44,14 @@ export default function Portfolio() {
                 </div>
                 <div className="short_info">
                   <h4>
-                    <a href="portfolio-details.html">Paint wall</a>
+                    <a href="#">Paint wall</a>
                   </h4>
-                  <p>Animated, portfolio</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 all latest">
-              <div className="portfolio_box">
-                <div className="single_portfolio">
+            <div className="col-lg-4 col-md-6">
+              <div className="project_box">
+                <div className="single_project">
                   <Image
                     src={portfImgs.p3}
                     alt=""
@@ -62,15 +60,14 @@ export default function Portfolio() {
                 </div>
                 <div className="short_info">
                   <h4>
-                    <a href="portfolio-details.html">female light</a>
+                    <a href="#">female light</a>
                   </h4>
-                  <p>Animated, portfolio</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 all popular">
-              <div className="portfolio_box">
-                <div className="single_portfolio">
+            <div className="col-lg-4 col-md-6">
+              <div className="project_box">
+                <div className="single_project">
                   <Image
                     src={portfImgs.p4}
                     alt=""
@@ -79,15 +76,14 @@ export default function Portfolio() {
                 </div>
                 <div className="short_info">
                   <h4>
-                    <a href="portfolio-details.html">fourth air</a>
+                    <a href="#">fourth air</a>
                   </h4>
-                  <p>Animated, portfolio</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 all following">
-              <div className="portfolio_box">
-                <div className="single_portfolio">
+            <div className="col-lg-4 col-md-6">
+              <div className="project_box">
+                <div className="single_project">
                   <Image
                     src={portfImgs.p5}
                     alt=""
@@ -96,15 +92,14 @@ export default function Portfolio() {
                 </div>
                 <div className="short_info">
                   <h4>
-                    <a href="portfolio-details.html">together sign</a>
+                    <a href="#">together sign</a>
                   </h4>
-                  <p>Animated, portfolio</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 all upcoming">
-              <div className="portfolio_box">
-                <div className="single_portfolio">
+            <div className="col-lg-4 col-md-6">
+              <div className="project_box">
+                <div className="single_project">
                   <Image
                     src={portfImgs.p6}
                     alt=""
@@ -113,15 +108,14 @@ export default function Portfolio() {
                 </div>
                 <div className="short_info">
                   <h4>
-                    <a href="portfolio-details.html">multiply fowl</a>
+                    <a href="#">multiply fowl</a>
                   </h4>
-                  <p>Animated, portfolio</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 all upcoming following">
-              <div className="portfolio_box">
-                <div className="single_portfolio">
+            <div className="col-lg-4 col-md-6">
+              <div className="project_box">
+                <div className="single_project">
                   <Image
                     src={portfImgs.p7}
                     alt=""
@@ -130,15 +124,14 @@ export default function Portfolio() {
                 </div>
                 <div className="short_info">
                   <h4>
-                    <a href="portfolio-details.html">green heaven</a>
+                    <a href="#">green heaven</a>
                   </h4>
-                  <p>Animated, portfolio</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 all following">
-              <div className="portfolio_box">
-                <div className="single_portfolio">
+            <div className="col-lg-4 col-md-6">
+              <div className="project_box">
+                <div className="single_project">
                   <Image
                     src={portfImgs.p8}
                     alt=""
@@ -147,13 +140,12 @@ export default function Portfolio() {
                 </div>
                 <div className="short_info">
                   <h4>fly male</h4>
-                  <p>Animated, portfolio</p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 all upcoming">
-              <div className="portfolio_box">
-                <div className="single_portfolio">
+            <div className="col-lg-4 col-md-6">
+              <div className="project_box">
+                <div className="single_project">
                   <Image
                     src={portfImgs.p9}
                     alt=""
@@ -162,9 +154,8 @@ export default function Portfolio() {
                 </div>
                 <div className="short_info">
                   <h4>
-                    <a href="portfolio-details.html">season face</a>
+                    <a href="#">season face</a>
                   </h4>
-                  <p>Animated, portfolio</p>
                 </div>
               </div>
             </div>
