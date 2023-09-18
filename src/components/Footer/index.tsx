@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="flex-column">
               <div className="footer_logo">
                 <a href="#">
-                  <Image src={logo} alt="Cleriston" width={140} />
+                  <Image src={logo} alt="Cleriston" />
                 </a>
                 <h4>Follow Me</h4>
               </div>
