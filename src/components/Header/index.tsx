@@ -2,15 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import logo from '../../assets/imgs/logo.svg';
+import useScreenSize from '@/utils/useScreenSize';
 
 import './styles.css';
 
 export default function Header() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth || 0);
-
-  window.addEventListener('resize', () => {
-    setWindowWidth(window.innerWidth);
-  })
+  const screenSize = useScreenSize();
 
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
@@ -19,7 +16,13 @@ export default function Header() {
   return (
     <header className="header_area" id="header">
       <div className="main_menu">
-        <nav className={windowWidth >= 768 ? "navbar navbar-expand-md nav-f1" : "navbar navbar-expand-md navbar-dark bg-dark"}>
+        <nav
+          className={
+            screenSize.width >= 768
+              ? 'navbar navbar-expand-md nav-f1'
+              : 'navbar navbar-expand-md navbar-dark bg-dark'
+          }
+        >
           <div className="container-fluid my-1">
             <a className="navbar-brand custom-brand" href="#">
               <Image src={logo} alt="Cleriston" width={140} />
@@ -46,23 +49,23 @@ export default function Header() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="#about">
                     ABOUT
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="#tech">
                     SKILLS
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    PROJECTS
+                  <a className="nav-link" href="#feature">
+                    SERVICES
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    CONTACT
+                  <a className="nav-link" href="#portfolio">
+                    PROJECTS
                   </a>
                 </li>
               </ul>

@@ -3,22 +3,33 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import techImgs from '@/assets/imgs/techs';
 
 import './styles.css';
+
 export default function Tech() {
-  const [techImgs, setTechImgs] = useState<any[]>([]);
+  // const [techImgs, setTechImgs] = useState<any[]>([]);
+
+  const getExperienceYears = () => {
+    const initialDate = new Date('2019-12-01').getTime();
+    const today = Date.now();
+    return (today - initialDate) / 1000 / 3600 / 24 / 365;
+  };
 
   useEffect(() => {
-    function importAll(r: __WebpackModuleApi.RequireContext) {
+    /*     function importAll(r: __WebpackModuleApi.RequireContext) {
       let images: any = {};
       r.keys().map((item: string, index: any) => {
         images[item.replace('./', '')] = r(item);
       });
+      
+      console.log(images);
+      
       return images;
     }
 
     const images = importAll(
-      require.context('../../assets/imgs/techs', false, /\.(png|jpe?g|svg)$/),
+      require.context('@/assets/imgs/techs', false, /\.(png|jpe?g|svg)$/),
     );
 
     const imgsSet = new Set();
@@ -29,7 +40,7 @@ export default function Tech() {
     const uniqueImgs: any[] = [];
     imgsSet.forEach(x => uniqueImgs.push(x));
 
-    setTechImgs(uniqueImgs);
+    setTechImgs(uniqueImgs); */
   }, []);
 
   return (
@@ -40,13 +51,14 @@ export default function Tech() {
             <div className="row">
               {techImgs &&
                 techImgs.map(img => (
-                  <div
-                    key={Math.random()}
-                    className="col-lg-4 col-md-4 col-sm-6"
-                  >
+                  <div key={img.id} className="col-lg-4 col-md-4 col-sm-6">
                     <div className="single-tech-item d-table">
                       <div className="d-table-cell text-center">
-                        <Image src={img} alt="Tech image" />
+                        <Image
+                          src={img.imgSrc}
+                          alt={img.caption}
+                          height={100}
+                        />
                       </div>
                     </div>
                   </div>
@@ -56,7 +68,9 @@ export default function Tech() {
           <div className="offset-lg-2 col-lg-4 col-md-6">
             <div className="client-info">
               <div className="d-flex mb-50">
-                <span className="txt-large">10</span>
+                <span className="txt-large">
+                  {getExperienceYears().toFixed(1)}
+                </span>
                 <span className="txt-small">Years Experience Working</span>
               </div>
               <div className="call-now d-flex">

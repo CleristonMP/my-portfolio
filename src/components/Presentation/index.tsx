@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import banner from '../../assets/imgs/home-right.png';
+import myAvatar from '@/assets/imgs/my-avatar.jpg';
 
 import './styles.css';
 
@@ -28,7 +28,7 @@ export default function Presentation() {
             </div>
             <div className="col-lg-5">
               <div className="home_right_img">
-                <Image src={banner} alt="Cleriston avatar" />
+                <Image src={myAvatar} alt="Cleriston avatar" />
               </div>
             </div>
           </div>

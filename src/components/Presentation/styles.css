@@ -84,7 +84,8 @@
 
   .banner_inner .banner_content .tr-bg {
     display: unset;
-    background-image: linear-gradient(var(--bg-white), var(--bg-white));
+    background-image: linear-gradient(var(--bg-white), var(--bg-white)),
+      radial-gradient(circle at top left, var(--bg-cyan), var(--bg-purple));
     border: 2px double var(--bg-purple);
     color: var(--txt-dark);
     box-shadow: none;
@@ -96,7 +97,6 @@
     outline: none;
     text-transform: uppercase;
     background-origin: border-box;
-    background-clip: content-box, border-box;
   }
 
   .banner_inner .banner_content .tr-bg:hover {
@@ -130,5 +130,21 @@
     width: 100%;
     height: auto;
     margin-top: 195px;
+    border-radius: 60% 40%;
+    opacity: 0.9;
+    transition: all 1s ease-in-out 0.25s;
+  }
+
+  .home_right_img img:hover {
+    opacity: 1;
+    border-radius: 40% 60%;
+    box-shadow: 5px 5px 60px 10px var(--bg-purple);
+  }
+}
+
+@media (min-width: 1400px) {
+  .home_right_img img {
+    width: auto;
+    margin-top: 100px;
   }
 }
