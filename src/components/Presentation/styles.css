@@ -1,9 +1,5 @@
-.banner_inner {
-  padding: 50px 0;
-}
-
 .banner_content {
-  padding: 30px 15px;
+  padding: 0 15px;
 }
 
 .banner_content h3 {
@@ -31,10 +27,6 @@
 }
 
 @media (min-width: 576px) {
-  .banner_inner {
-    padding: 100px 0;
-  }
-
   .banner_content {
     padding: 0;
   }
@@ -55,10 +47,6 @@
 }
 
 @media (min-width: 768px) {
-  .banner_inner {
-    padding: 150px 0;
-  }
-
   .banner_content h3 {
     font-size: 2.5rem;
   }
@@ -114,6 +102,11 @@
 }
 
 @media (min-width: 992px) {
+  .presentation_area {
+    align-items: start;
+    padding-top: 100px;
+  }
+
   .banner_inner {
     padding: 0;
   }
@@ -144,14 +137,6 @@
 }
 
 @media (min-width: 1200px) {
-  .presentation_area {
-    padding-top: 0;
-  }
-
-  .banner_content {
-    margin-top: 80px;
-  }
-
   .banner_content h3:after {
     width: 700px;
     left: 20%;
@@ -159,6 +144,6 @@
   }
 
   .home_right_img img {
-    margin-top: 90px;
+    margin-top: 10px;
   }
 }

@@ -17,12 +17,12 @@ export default function Presentation() {
                 <h1 className="text-uppercase">I am Cleriston Pereira</h1>
                 <h5 className="text-uppercase">Full stack web developer</h5>
                 <div className="d-flex align-items-center">
-                  <a className="btn btn-primary my-btn custom-btn" href="#">
+                  <button type='button' className="btn btn-primary my-btn custom-btn">
                     <span>Hire Me</span>
-                  </a>
-                  <a className="btn btn-primary tr-bg" href="#">
+                  </button>
+                  <button type='button' className="btn btn-primary tr-bg">
                     <span>Get CV</span>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

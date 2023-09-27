@@ -1,20 +1,18 @@
-.single-tech-item {
-  margin: 0 auto;
-  margin-bottom: 30px;
-  width: 50%;
-  max-width: 150px;
-  height: 100px;
-  transition: all 0.4s ease 0s;
+.tech_area {
+  padding-top: 100px;
 }
 
-.single-tech-item .d-table-cell {
-  vertical-align: middle;
+.tech-title {
+  font-weight: 700;
+}
+
+.single-tech-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .single-tech-item img {
-  height: 100%;
-  max-width: 100px;
-  margin: 0 auto;
   transition: all 0.4s ease 0s;
   cursor: pointer;
 }
@@ -23,14 +21,14 @@
   filter: drop-shadow(15px 15px 3px var(--shadow-blue));
 }
 
-.client-info {
-  padding: 50px 10px 25px;
+.my-info {
+  padding: 50px 10px;
   background-color: var(--bg-light-purple);
   text-align: center;
   position: relative;
 }
 
-.client-info::before {
+.my-info::before {
   background: none;
   content: '';
   position: absolute;
@@ -42,23 +40,21 @@
 
 .txt-large {
   color: var(--txt-purple);
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 700;
-  line-height: 85px;
+  line-height: 1;
   position: relative;
   z-index: 9;
 }
 
 .txt-small {
   text-align: left;
-  font-size: 1em;
   margin-left: 15px;
-  line-height: 1.5;
+  letter-spacing: 0.05em;
 }
 
-.call-now {
+.contact {
   text-align: left;
-  margin-bottom: 40px;
 }
 
 .phone-icon {
@@ -66,36 +62,28 @@
   font-weight: 700;
 }
 
-.call-now p {
+.contact p {
   color: var(--txt-purple);
-  font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 5px;
-  font-weight: 400;
 }
 
-.call-now h3 {
-  font-size: 17px;
+.contact h3 {
+  font-size: 1rem;
 }
 
 @media (min-width: 576px) {
-  .single-tech-item {
-    margin: unset;
-    margin-bottom: 30px;
-    width: 60%;
+  .tech-title {
+    font-size: 2rem;
+    font-weight: 700;
   }
 
-  .client-info {
-    margin-top: 50px;
-    padding-top: 25px;
+  .my-info {
+    padding: 30px;
   }
 
-  .client-info::before {
-    background: url('../../assets/imgs/client-info-bg.png') no-repeat;
-  }
-
-  .client-info {
-    padding: 25px 30px;
+  .my-info::before {
+    background: url('../../assets/imgs/my-info-bg.png') no-repeat;
   }
 
   .txt-large {
@@ -103,57 +91,70 @@
   }
 
   .txt-small {
-    font-size: 1.5em;
-  }
-
-  .call-now {
-    padding-top: 50px;
+    font-size: 1.5rem;
   }
 
   .phone-icon {
-    font-size: 60px;
+    font-size: 3.75rem;
   }
 
-  .call-now h3 {
-    font-size: 24px;
+  .contact h3 {
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  .single-tech-item {
-    width: 80%;
-    max-width: 170px;
+  .tech-title {
+    font-size: 2.25rem;
   }
 
   .single-tech-item img {
-    max-width: 80px;
     height: auto;
   }
 
-  .client-info {
+  .my-info {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .txt-small {
+    font-size: 1.4rem;
   }
 }
 
 @media (min-width: 992px) {
-  .single-tech-item {
-    width: 100%;
+  .tech_area {
+    padding-top: unset;
   }
 
-  .client-info {
+  .tech-title {
+    line-height: 1.5;
+  }
+
+  .single-tech-item {
+    margin-bottom: 50px;
+  }
+
+  .my-info {
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 25px;
   }
 
   .txt-large {
     font-size: 5.5em;
   }
+
+  .txt-small {
+    font-size: 1.25rem;
+  }
+
+  .contact h3 {
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width: 1200px) {
-  .client-info {
+  .my-info {
     padding-left: 20px;
     padding-right: 20px;
   }

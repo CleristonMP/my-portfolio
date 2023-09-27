@@ -28,7 +28,7 @@ export default function Header() {
       tech:
         (windowScrollY >= 1500 && windowScrollY < 1990) &&
         windowHash === '#tech',
-      feature:
+      courses:
         (windowScrollY >= 1990 && windowScrollY < 2620) ||
         windowHash === '#courses',
       projects: windowScrollY >= 2620 || windowHash === '#projects',
@@ -105,7 +105,7 @@ export default function Header() {
                 <li className="nav-item">
                   <a
                     className={`nav-link ${
-                      handleLinkActivation().feature ? 'active' : ''
+                      handleLinkActivation().courses ? 'active' : ''
                     }`}
                     href="#courses"
                   >

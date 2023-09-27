@@ -24,7 +24,6 @@
   padding: 0;
   margin: 0;
   font-family: Rubik, sans-serif;
-  font-weight: 500;
   color: var(--txt-black);
 }
 
@@ -32,15 +31,16 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  line-height: 26px;
-  font-size: 15px;
+  line-height: 1.25;
 }
 
 section {
   min-height: 100vh;
-  padding: 100px 10px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -51,14 +51,6 @@ a {
 
 .f1 {
   flex: 1 !important;
-}
-
-.mb-50 {
-  margin-bottom: 50px;
-}
-
-.ml-15 {
-  margin-left: 15px;
 }
 
 .custom-btn {
