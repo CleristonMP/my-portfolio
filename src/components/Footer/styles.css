@@ -21,6 +21,11 @@
 .footer_social {
   text-align: center;
   margin: 25px 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1em;
 }
 
 .footer_social a {

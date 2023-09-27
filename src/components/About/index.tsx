@@ -6,7 +6,7 @@ import './styles.css';
 
 export default function About() {
   return (
-    <section id="about" className="about_area section_gap">
+    <section id="about" className="about_area">
       <div className="container">
         <div className="row justify-content-start align-items-center">
           <div className="col-lg-5">

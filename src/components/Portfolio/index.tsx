@@ -11,7 +11,7 @@ export default function Portfolio() {
         <div className="row">
           <div className="col-lg-12">
             <div className="portfolio_title text-left">
-              <h2>quality work Recently done project</h2>
+              <h2>last projects carried out</h2>
             </div>
           </div>
         </div>

@@ -1,7 +1,3 @@
-.portfolio {
-  padding-bottom: 50px;
-}
-
 .portfolio_title {
   margin-bottom: 50px;
 }
@@ -50,12 +46,6 @@
 
   .short_info {
     margin-top: 30px;
-  }
-}
-
-@media (min-width: 992px) {
-  .portfolio {
-    padding-bottom: 120px;
   }
 }
 

@@ -7,7 +7,7 @@ import './styles.css';
 
 export default function Presentation() {
   return (
-    <section className="home_banner_area" id="presentation">
+    <section className="presentation_area" id="presentation">
       <div className="banner_inner">
         <div className="container">
           <div className="row">

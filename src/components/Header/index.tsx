@@ -3,15 +3,42 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import logo from '../../assets/imgs/logo.svg';
 import useScreenSize from '@/utils/useScreenSize';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.css';
 
 export default function Header() {
+  const [windowHash, setWindowHash] = useState(window.location.hash);
+  const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
+
   const screenSize = useScreenSize();
+
+  window.addEventListener('scroll', () => setWindowScrollY(window.scrollY));
+  window.addEventListener('hashchange', () =>
+    setWindowHash(window.location.hash),
+  );
+
+  const handleLinkActivation = () => {
+    return {
+      home: windowScrollY < 734 || windowHash === '' || windowHash === '#',
+      about:
+        (windowScrollY >= 734 && windowScrollY < 1500) ||
+        windowHash === '#about',
+      tech:
+        (windowScrollY >= 1500 && windowScrollY < 1990) &&
+        windowHash === '#tech',
+      feature:
+        (windowScrollY >= 1990 && windowScrollY < 2620) ||
+        windowHash === '#courses',
+      projects: windowScrollY >= 2620 || windowHash === '#projects',
+    };
+  };
 
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
-  }, []);
+    
+  }, [windowScrollY]);
 
   return (
     <header className="header_area" id="header">
@@ -19,8 +46,10 @@ export default function Header() {
         <nav
           className={
             screenSize.width >= 768
-              ? 'navbar navbar-expand-md nav-f1'
-              : 'navbar navbar-expand-md navbar-dark bg-dark'
+              ? `navbar navbar-expand-md fixed-top bg-white px-sm-3 nav-f1 ${
+                  windowScrollY >= 130 ? 'nav-shadow' : 'no-shadow'
+                }`
+              : 'navbar navbar-expand-md fixed-top navbar-dark bg-dark px-sm-3'
           }
         >
           <div className="container-fluid my-1">
@@ -28,7 +57,7 @@ export default function Header() {
               <Image src={logo} alt="Cleriston" width={140} />
             </a>
             <button
-              className="navbar-toggler"
+              className="navbar-toggler custom-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarToggler"
@@ -36,7 +65,7 @@ export default function Header() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              <FontAwesomeIcon icon={faBars} />
             </button>
             <div
               className="collapse navbar-collapse justify-content-end"
@@ -44,27 +73,52 @@ export default function Header() {
             >
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link active" href="#">
+                  <a
+                    className={`nav-link ${
+                      handleLinkActivation().home ? 'active' : ''
+                    }`}
+                    href="#"
+                  >
                     HOME
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#about">
+                  <a
+                    className={`nav-link ${
+                      handleLinkActivation().about ? 'active' : ''
+                    }`}
+                    href="#about"
+                  >
                     ABOUT
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#tech">
-                    SKILLS
+                  <a
+                    className={`nav-link ${
+                      handleLinkActivation().tech ? 'active' : ''
+                    }`}
+                    href="#tech"
+                  >
+                    TECHS
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#feature">
-                    SERVICES
+                  <a
+                    className={`nav-link ${
+                      handleLinkActivation().feature ? 'active' : ''
+                    }`}
+                    href="#courses"
+                  >
+                    COURSES
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#portfolio">
+                  <a
+                    className={`nav-link ${
+                      handleLinkActivation().projects ? 'active' : ''
+                    }`}
+                    href="#portfolio"
+                  >
                     PROJECTS
                   </a>
                 </li>

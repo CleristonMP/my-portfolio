@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -8,40 +8,11 @@ import techImgs from '@/assets/imgs/techs';
 import './styles.css';
 
 export default function Tech() {
-  // const [techImgs, setTechImgs] = useState<any[]>([]);
-
   const getExperienceYears = () => {
     const initialDate = new Date('2019-12-01').getTime();
     const today = Date.now();
     return (today - initialDate) / 1000 / 3600 / 24 / 365;
   };
-
-  useEffect(() => {
-    /*     function importAll(r: __WebpackModuleApi.RequireContext) {
-      let images: any = {};
-      r.keys().map((item: string, index: any) => {
-        images[item.replace('./', '')] = r(item);
-      });
-      
-      console.log(images);
-      
-      return images;
-    }
-
-    const images = importAll(
-      require.context('@/assets/imgs/techs', false, /\.(png|jpe?g|svg)$/),
-    );
-
-    const imgsSet = new Set();
-    for (const x in images) {
-      imgsSet.add(images[x].default);
-    }
-
-    const uniqueImgs: any[] = [];
-    imgsSet.forEach(x => uniqueImgs.push(x));
-
-    setTechImgs(uniqueImgs); */
-  }, []);
 
   return (
     <section id="tech" className="tech_area">
@@ -67,18 +38,18 @@ export default function Tech() {
           </div>
           <div className="offset-lg-2 col-lg-4 col-md-6">
             <div className="client-info">
-              <div className="d-flex mb-50">
+              <div className="d-flex align-items-center mb-50">
                 <span className="txt-large">
                   {getExperienceYears().toFixed(1)}
                 </span>
-                <span className="txt-small">Years Experience Working</span>
+                <span className="txt-small">Years Experience</span>
               </div>
               <div className="call-now d-flex">
                 <div>
                   <FontAwesomeIcon icon={faPhone} className="phone-icon" />
                 </div>
                 <div className="ml-15">
-                  <p>call me now</p>
+                  <p>contact me</p>
                   <h3>+55 98 9 8199 9361 </h3>
                 </div>
               </div>
