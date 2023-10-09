@@ -9,36 +9,68 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './styles.css';
 
 export default function Header() {
-  const [windowHash, setWindowHash] = useState(window.location.hash);
   const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
+  const [activeSection, setActiveSection] = useState('');
 
   const screenSize = useScreenSize();
 
-  window.addEventListener('scroll', () => setWindowScrollY(window.scrollY));
-  window.addEventListener('hashchange', () =>
-    setWindowHash(window.location.hash),
-  );
+  const handleLinkClick = (section: string) => {
+    setActiveSection(section);
+    scrollToSection(section);
+  };
 
-  const handleLinkActivation = () => {
-    return {
-      home: windowScrollY < 734 || windowHash === '' || windowHash === '#',
-      about:
-        (windowScrollY >= 734 && windowScrollY < 1500) ||
-        windowHash === '#about',
-      tech:
-        (windowScrollY >= 1500 && windowScrollY < 1990) &&
-        windowHash === '#tech',
-      courses:
-        (windowScrollY >= 1990 && windowScrollY < 2620) ||
-        windowHash === '#courses',
-      projects: windowScrollY >= 2620 || windowHash === '#projects',
-    };
+  const scrollToSection = (section: string) => {
+    const element = document.getElementById(section);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {
-    require('bootstrap/dist/js/bootstrap.bundle');
-    
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const sections = document.querySelectorAll('section');
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+          scrollPosition >= sectionTop - 100 &&
+          scrollPosition < sectionTop + sectionHeight - 50
+        ) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [activeSection]);
+
+  useEffect(() => {
+    const handleUrlAnchorChange = () => {
+      const sectionFromUrl = window.location.hash.substring(1);
+      setActiveSection(sectionFromUrl);
+    };
+
+    window.addEventListener('hashchange', handleUrlAnchorChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleUrlAnchorChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScrollChange = () => setWindowScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScrollChange);
+    return () => window.removeEventListener('scroll', handleScrollChange);
   }, [windowScrollY]);
+
+  useEffect(() => {
+    require('bootstrap/dist/js/bootstrap.bundle');
+  }, []);
 
   return (
     <header className="header_area" id="header">
@@ -75,8 +107,13 @@ export default function Header() {
                 <li className="nav-item">
                   <a
                     className={`nav-link ${
-                      handleLinkActivation().home ? 'active' : ''
+                      activeSection === '' || activeSection === 'presentation'
+                        ? 'active'
+                        : ''
                     }`}
+                    onClick={() => {
+                      handleLinkClick('#');
+                    }}
                     href="#"
                   >
                     HOME
@@ -85,8 +122,9 @@ export default function Header() {
                 <li className="nav-item">
                   <a
                     className={`nav-link ${
-                      handleLinkActivation().about ? 'active' : ''
+                      activeSection === 'about' ? 'active' : ''
                     }`}
+                    onClick={() => handleLinkClick('about')}
                     href="#about"
                   >
                     ABOUT
@@ -95,8 +133,9 @@ export default function Header() {
                 <li className="nav-item">
                   <a
                     className={`nav-link ${
-                      handleLinkActivation().tech ? 'active' : ''
+                      activeSection === 'tech' ? 'active' : ''
                     }`}
+                    onClick={() => handleLinkClick('tech')}
                     href="#tech"
                   >
                     TECHS
@@ -105,8 +144,9 @@ export default function Header() {
                 <li className="nav-item">
                   <a
                     className={`nav-link ${
-                      handleLinkActivation().courses ? 'active' : ''
+                      activeSection === 'courses' ? 'active' : ''
                     }`}
+                    onClick={() => handleLinkClick('courses')}
                     href="#courses"
                   >
                     COURSES
@@ -115,8 +155,9 @@ export default function Header() {
                 <li className="nav-item">
                   <a
                     className={`nav-link ${
-                      handleLinkActivation().projects ? 'active' : ''
+                      activeSection === 'portfolio' ? 'active' : ''
                     }`}
+                    onClick={() => handleLinkClick('portfolio')}
                     href="#portfolio"
                   >
                     PROJECTS
