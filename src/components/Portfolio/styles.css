@@ -1,5 +1,9 @@
+.portfolio {
+  padding-top: 100px;
+}
+
 .portfolio_title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .portfolio_title h2 {
@@ -12,6 +16,10 @@
 
 .project_box {
   margin-bottom: 35px;
+}
+
+.single_project {
+  cursor: pointer;
 }
 
 .short_info {
@@ -35,6 +43,10 @@
 }
 
 @media (min-width: 768px) {
+  .portfolio_title {
+    margin-bottom: 50px;
+  }
+
   .portfolio_title h2 {
     font-size: 36px;
     line-height: 50px;
@@ -46,11 +58,5 @@
 
   .short_info {
     margin-top: 30px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .portfolio_title {
-    margin-bottom: 100px;
   }
 }
