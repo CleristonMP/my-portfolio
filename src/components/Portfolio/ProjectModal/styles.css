@@ -1,0 +1,4 @@
+.btn-close-ctr {
+  display: flex;
+  justify-content: flex-end;
+}
