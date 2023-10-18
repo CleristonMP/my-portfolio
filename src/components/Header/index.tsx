@@ -9,7 +9,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './styles.css';
 
 export default function Header() {
-  const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
+  const [windowScrollY, setWindowScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState('');
 
   const screenSize = useScreenSize();

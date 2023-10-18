@@ -6,13 +6,17 @@ import {
   faFacebook,
   faInstagram,
   faGithub,
-  faLinkedin
+  faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.css';
 
 export default function Footer() {
+  const getFullYear = () => {
+    return new Date().getFullYear();
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -26,16 +30,22 @@ export default function Footer() {
                 <h4>Contact Me</h4>
               </div>
               <div className="footer_social">
-                <a href="https://www.facebook.com/profile.php?id=100072653596522" target='_blank'>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100072653596522"
+                  target="_blank"
+                >
                   <FontAwesomeIcon icon={faFacebook} />
                 </a>
-                <a href="https://www.instagram.com/c.m.peras/" target='_blank'>
+                <a href="https://www.instagram.com/c.m.peras/" target="_blank">
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
-                <a href="https://github.com/CleristonMP" target='_blank'>
+                <a href="https://github.com/CleristonMP" target="_blank">
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
-                <a href="https://www.linkedin.com/in/cleriston-pereira-a60a471bb/" target='_blank'>
+                <a
+                  href="https://www.linkedin.com/in/cleriston-pereira-a60a471bb/"
+                  target="_blank"
+                >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
                 <a href="mailto:cmelopereira@outlook.com">
@@ -47,9 +57,8 @@ export default function Footer() {
         </div>
         <div className="row justify-content-center footer_bottom">
           <p className="col-lg-8 col-sm-12 footer_text">
-            Copyright ©
-            <script>document.write(new Date().getFullYear());</script>2023 All
-            rights reserved | This template is made by{' '}
+            Copyright ©{getFullYear() + ' '}
+            All rights reserved | This template is made by{' '}
             <a href="https://colorlib.com" target="_blank">
               Colorlib
             </a>
