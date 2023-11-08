@@ -43,9 +43,13 @@ export default function About() {
                 study and develop projects to practice the knowledge acquired
                 and improve it.
               </p>
-              <button type="button" className="btn btn-primary custom-btn">
+              <a
+                href="https://raw.githubusercontent.com/cleristonmp/my-portfolio/main/src/assets/files/resume-cleriston-pereira.pdf"
+                type="button"
+                className="btn btn-primary custom-btn"
+              >
                 <span>Download CV</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
